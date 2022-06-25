@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+fastapi = "*"
+uvicorn = "*"
+sqlalchemy = "*"
+passlib = "*"
+bcrypt = "*"
+python-jose = "*"
+python-multipart = "*"
+celery = "*"
+python-dotenv = "*"
+daphne = "*"
+redis = "*"
+celery-sqlalchemy-scheduler = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"

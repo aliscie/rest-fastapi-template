@@ -1,0 +1,8 @@
+start:
+	daphne -p 8000 -b 0.0.0.0 app.main:app
+
+celery:
+	celery -A celery_worker.celery worker --loglevel=info
+
+celery_beets:
+	celery -A celery_worker.celery beat -l INFO --scheduler celery_sqlalchemy_scheduler.schedulers:DatabaseScheduler
