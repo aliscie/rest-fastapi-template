@@ -16,6 +16,9 @@ python-dotenv = "*"
 daphne = "*"
 redis = "*"
 celery-sqlalchemy-scheduler = "*"
+pytest = "*"
+requests = "*"
+django-sendgrid-webhook = "*"
 
 [dev-packages]
 
