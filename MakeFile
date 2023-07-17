@@ -1,8 +1,31 @@
 start:
-	daphne -p 8000 -b 0.0.0.0 app.main:app
+	daphne -p 8000 -b 0.0.0.0 app.main:fastapi_app
 
 celery:
 	celery -A celery_worker.celery worker --loglevel=info
 
 celery_beets:
 	celery -A celery_worker.celery beat -l INFO --scheduler celery_sqlalchemy_scheduler.schedulers:DatabaseScheduler
+
+actiate_env:
+	source myenv/bin/activate
+
+init_db:
+	alembic init alembic
+	#alembic revision --autogenerate -m "initial"
+
+run:
+	docker-compose up
+	#docker-compose build
+
+
+migrations:
+	#/make sure to activate an login pgAdmin before this
+	docker-compose run app alembic revision --autogenerate -m "New Migration"
+
+
+migrate:
+	docker-compose run app alembic upgrade head
+
+
+

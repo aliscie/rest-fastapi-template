@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="08776744-769e-471e-8cc7-deaa9f03bd81" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alembic/env.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/env.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/error_messages.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/fastapi-course-main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fastapi-course-main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MakeFile" beforeDir="false" afterPath="$PROJECT_DIR$/MakeFile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/repository/blog.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/repository/blog.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/routers/authentication.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/routers/authentication.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/routers/blog.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/routers/blog.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/routers/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/routers/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/schemas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule.db" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="hfeau4au" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2SeDc2bhOg5IBA31iRuFbHQ3myR" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/ahmed/Desktop/rest-fastapi-template/alembic",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/alembic" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Makefile Target.migrations">
+    <configuration name="migrations" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/MakeFile" target="migrations" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/MakeFile" target="start" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Makefile Target.migrations" />
+        <item itemvalue="Makefile Target.start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="08776744-769e-471e-8cc7-deaa9f03bd81" name="Changes" comment="" />
+      <created>1689498230056</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1689498230056</updated>
+      <workItem from="1689498230653" duration="37241000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

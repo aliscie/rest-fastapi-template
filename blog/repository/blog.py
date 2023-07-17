@@ -24,7 +24,7 @@ def destroy(id:int,db: Session):
     db.commit()
     return 'done'
 
-def update(id:int,request:schemas.Blog, db:Session):
+def update(id: int, request: schemas.Blog, db: Session):
     blog = db.query(models.Blog).filter(models.Blog.id == id)
 
     if not blog.first():
