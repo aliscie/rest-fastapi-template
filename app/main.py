@@ -6,7 +6,7 @@ from fastapi import FastAPI
 # from alembic.env import database_url
 from blog import models
 from blog.database import engine
-from blog.routers import blog, user, authentication
+from blog.routers import blog, user, authentication, personal_photos, home_photos
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 from fastapi_sqlalchemy import DBSessionMiddleware
@@ -34,4 +34,6 @@ models.Base.metadata.create_all(engine)
 
 fastapi_app.include_router(blog.router)
 fastapi_app.include_router(user.router)
+fastapi_app.include_router(personal_photos.router)
 fastapi_app.include_router(authentication.router)
+fastapi_app.include_router(home_photos.router)

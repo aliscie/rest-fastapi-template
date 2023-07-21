@@ -12,7 +12,7 @@ actiate_env:
 
 init_db:
 	alembic init alembic
-	#alembic revision --autogenerate -m "initial"
+	#docker-compose run app alembic revision --autogenerate -m "initial"
 
 run:
 	docker-compose up
@@ -26,6 +26,3 @@ migrations:
 
 migrate:
 	docker-compose run app alembic upgrade head
-
-
-

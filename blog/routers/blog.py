@@ -1,7 +1,8 @@
-from typing import List
 from fastapi import APIRouter, Depends, status, HTTPException
-from .. import schemas, database, models, oauth2
+from fastapi import UploadFile, File
 from sqlalchemy.orm import Session
+
+from .. import schemas, database, models, oauth2
 from ..repository import blog
 
 router = APIRouter(
@@ -12,15 +13,36 @@ router = APIRouter(
 get_db = database.get_db
 
 
-@router.get('/', response_model=List[schemas.ShowBlog])
+@router.post("/upload/")
+async def create_upload_file(request):
+    print('--------')
+    # print("video", video)
+    print("request", request)
+    return {"filename": 'video'}
+
+
+@router.get('/')
 def all(db: Session = Depends(get_db), current_user: schemas.User = Depends(oauth2.get_current_user)):
-    return blog.get_all(db)
+    blogs = db.query(models.Blog).all()
+    res = []
+    for blog in blogs:
+        item = {"title": blog.title, "id": blog.id}
+        res.append(item)
+    return res
 
 
-@router.post('/', status_code=status.HTTP_201_CREATED, )
-def create(request: schemas.Blog, db: Session = Depends(get_db),
-           current_user: schemas.User = Depends(oauth2.get_current_user)):
-    return blog.create(request, db)
+@router.post('/', status_code=status.HTTP_201_CREATED)
+def create(
+        # video: UploadFile,
+        request: schemas.BlogBase,
+        db: Session = Depends(get_db),
+        current_user: schemas.User = Depends(oauth2.get_current_user)
+):
+    new_blog = models.Blog(title=request.title, body=request.body, user_id=current_user.id)
+    db.add(new_blog)
+    db.commit()
+    db.refresh(new_blog)
+    return new_blog
 
 
 @router.delete('/{id}', status_code=status.HTTP_204_NO_CONTENT)
@@ -37,14 +59,18 @@ def update(id: int, request: schemas.Blog, db: Session = Depends(get_db),
 
     # Update the item attributes with the non-None values from the request
     for key, value in request.dict(exclude_unset=True).items():
-        setattr(item, key, value)
+        if value is not None:
+            setattr(item, key, value)
 
-    db.add(item)
     db.commit()
     db.refresh(item)
-    return item
+    return request.dict(exclude_unset=True).items()
 
 
-@router.get('/{id}', status_code=200, response_model=schemas.ShowBlog)
-def show(id: int, db: Session = Depends(get_db), current_user: schemas.User = Depends(oauth2.get_current_user)):
-    return blog.show(id, db)
+@router.get('/{id}', status_code=200)
+def show(id: int, db: Session = Depends(get_db)):
+    blog = db.query(models.Blog).filter(models.Blog.id == id).first()
+    if not blog:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
+                            detail=f"Blog with the id {id} is not available")
+    return blog
