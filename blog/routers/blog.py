@@ -24,11 +24,11 @@ async def create_upload_file(request):
 @router.get('/')
 def all(db: Session = Depends(get_db), current_user: schemas.User = Depends(oauth2.get_current_user)):
     blogs = db.query(models.Blog).all()
-    res = []
-    for blog in blogs:
-        item = {"title": blog.title, "id": blog.id}
-        res.append(item)
-    return res
+    # res = []
+    # for blog in blogs:
+    #     item = {"title": blog.title, "id": blog.id}
+    #     res.append(item)
+    return blogs
 
 
 @router.post('/', status_code=status.HTTP_201_CREATED)

@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08776744-769e-471e-8cc7-deaa9f03bd81" name="Changes" comment="remove the db file">
+    <list default="true" id="08776744-769e-471e-8cc7-deaa9f03bd81" name="Changes" comment="finalize">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/routers/blog.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/routers/blog.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +76,12 @@
       <option name="presentableId" value="Default" />
       <updated>1689498230056</updated>
       <workItem from="1689498230653" duration="94344000" />
-      <workItem from="1689858294080" duration="7538000" />
+      <workItem from="1689858294080" duration="8050000" />
+      <workItem from="1689929513224" duration="33000" />
+      <workItem from="1690458494337" duration="37000" />
+      <workItem from="1690543247546" duration="688000" />
+      <workItem from="1690552636655" duration="606000" />
+      <workItem from="1690612504329" duration="29000" />
     </task>
     <task id="LOCAL-00001" summary="basic backend">
       <created>1689594056257</created>
@@ -118,7 +125,21 @@
       <option name="project" value="LOCAL" />
       <updated>1689926959725</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="users can change password">
+      <created>1689928383973</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1689928383973</updated>
+    </task>
+    <task id="LOCAL-00008" summary="finalize">
+      <created>1689928556818</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1689928556818</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +161,8 @@
     <MESSAGE value="finalize home-photo and blogs" />
     <MESSAGE value="fix change password" />
     <MESSAGE value="remove the db file" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove the db file" />
+    <MESSAGE value="users can change password" />
+    <MESSAGE value="finalize" />
+    <option name="LAST_COMMIT_MESSAGE" value="finalize" />
   </component>
 </project>
