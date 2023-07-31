@@ -37,8 +37,7 @@ def delete_photo(
         db: Session = Depends(get_db)
 ):
     # current_user = db.query(models.User).filter(models.User.email == email).first()
-    photo = db.query(models.BodyPhoto).filter(models.BodyPhoto.id == photo_id,
-                                              models.BodyPhoto.creator_id == current_user.id).first()
+    photo = db.query(models.BodyPhoto).filter(models.BodyPhoto.id == photo_id).first()
     if not photo:
         raise HTTPException(status_code=404, detail="Photo not found")
     db.delete(photo)
