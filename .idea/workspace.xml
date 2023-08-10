@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08776744-769e-471e-8cc7-deaa9f03bd81" name="Changes" comment="finalize">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="08776744-769e-471e-8cc7-deaa9f03bd81" name="Changes" comment="add env back">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/routers/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/routers/user.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +80,14 @@
       <workItem from="1690458494337" duration="37000" />
       <workItem from="1690543247546" duration="688000" />
       <workItem from="1690552636655" duration="606000" />
-      <workItem from="1690624417450" duration="941000" />
+      <workItem from="1690624417450" duration="1043000" />
+      <workItem from="1690625604318" duration="20000" />
+      <workItem from="1690625761467" duration="49000" />
+      <workItem from="1690626236346" duration="2625000" />
+      <workItem from="1690711227602" duration="666000" />
+      <workItem from="1690808554437" duration="224000" />
+      <workItem from="1690810730670" duration="16000" />
+      <workItem from="1691666690521" duration="915000" />
     </task>
     <task id="LOCAL-00001" summary="basic backend">
       <created>1689594056257</created>
@@ -138,7 +145,21 @@
       <option name="project" value="LOCAL" />
       <updated>1689928556818</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="remove env">
+      <created>1690625409585</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1690625409585</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add env back">
+      <created>1690808773713</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1690808773713</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,6 +183,8 @@
     <MESSAGE value="remove the db file" />
     <MESSAGE value="users can change password" />
     <MESSAGE value="finalize" />
-    <option name="LAST_COMMIT_MESSAGE" value="finalize" />
+    <MESSAGE value="remove env" />
+    <MESSAGE value="add env back" />
+    <option name="LAST_COMMIT_MESSAGE" value="add env back" />
   </component>
 </project>

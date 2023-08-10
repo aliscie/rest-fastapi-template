@@ -13,6 +13,19 @@ router = APIRouter(
 get_db = database.get_db
 
 
+@router.delete("/{id}", response_model=schemas.ShowUser)
+def delete_user(user_id: int, db: Session = Depends(get_db)):
+    obj = db.query(models.User).filter(models.User.id == user_id).first()
+
+    if not obj:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="User not found")
+
+    db.delete(obj)
+    db.commit()
+
+    return obj
+
+
 @router.get('/')
 def all(
         skip: int = 0,
