@@ -1,8 +1,9 @@
 from fastapi import APIRouter, Depends, status
 from fastapi import HTTPException
 from sqlalchemy.orm import Session
-from ..hashing import Hash
+
 from .. import database, schemas, models, oauth2
+from ..hashing import Hash
 from ..repository import user
 
 router = APIRouter(
@@ -13,10 +14,7 @@ router = APIRouter(
 get_db = database.get_db
 
 
-
-
-
-@router.delete("/{id}")
+@router.delete("/{user_id}")
 def delete_user(user_id: int, db: Session = Depends(get_db)):
     obj = db.query(models.User).filter(models.User.id == user_id).first()
 
