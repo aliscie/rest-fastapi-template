@@ -13,7 +13,10 @@ router = APIRouter(
 get_db = database.get_db
 
 
-@router.delete("/{id}", response_model=schemas.ShowUser)
+
+
+
+@router.delete("/{id}")
 def delete_user(user_id: int, db: Session = Depends(get_db)):
     obj = db.query(models.User).filter(models.User.id == user_id).first()
 
@@ -23,7 +26,7 @@ def delete_user(user_id: int, db: Session = Depends(get_db)):
     db.delete(obj)
     db.commit()
 
-    return obj
+    return {'ok': True, 'message': 'User successfully deleted.'}
 
 
 @router.get('/')
