@@ -61,8 +61,8 @@ def get_user_photos(
         current_user: models.User = Depends(oauth2.get_current_user),
         db: Session = Depends(get_db)
 ):
-    if not current_user.is_admin:
-        raise HTTPException(status_code=403, detail="Permission denied")
+    # if not current_user.is_admin:
+    #     raise HTTPException(status_code=403, detail="Permission denied")
 
     photos = db.query(models.BodyPhoto).filter(models.BodyPhoto.creator_id == user_id).all()
     return photos
