@@ -1,13 +1,24 @@
 from sqlalchemy import create_engine
 # from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
+import os
+import sys
+from dotenv import load_dotenv
 
-SQLALCHAMY_DATABASE_URL = 'sqlite:///./blog.db'
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+load_dotenv(os.path.join(BASE_DIR, ".env"))
+sys.path.append(BASE_DIR)
 
-engine = create_engine(SQLALCHAMY_DATABASE_URL, connect_args={
-                       "check_same_thread": False})
+SQLALCHAMY_DATABASE_URL = os.getenv("DATABASE_URL")
+# SQLALCHAMY_DATABASE_URL = 'sqlite:///./blog.db'
 
-SessionLocal = sessionmaker(bind=engine, autocommit=False, autoflush=False,)
+engine = create_engine(
+    SQLALCHAMY_DATABASE_URL,
+    # connect_args={"check_same_thread": False}
+)
+
+SessionLocal = sessionmaker(bind=engine, autocommit=False, autoflush=False, )
+
 
 # Base = declarative_base()
 

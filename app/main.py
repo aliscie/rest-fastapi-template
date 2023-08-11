@@ -3,7 +3,6 @@ import sys
 
 from fastapi import FastAPI
 
-# from alembic.env import database_url
 from blog import models
 from blog.database import engine
 from blog.routers import blog, user, authentication, personal_photos, home_photos
