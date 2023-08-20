@@ -41,6 +41,10 @@ class UserUpdate(BaseModel):
     diet: str = None
     supplements: str = None
 
+    plan_type: str = None
+    antagonists: str = None
+    hormones: str = None
+
     class Config():
         orm_mode = True
 

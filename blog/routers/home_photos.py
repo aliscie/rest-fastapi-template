@@ -1,5 +1,8 @@
+from typing import List
+
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
+from starlette.websockets import WebSocket
 
 from .. import database, schemas, oauth2, models
 from ..repository import photo
@@ -14,7 +17,8 @@ get_db = database.get_db
 
 @router.get('/')
 def get_all_photos(db: Session = Depends(get_db)):
-    return db.query(models.HomePhoto).all()
+    # reverse the list
+    return db.query(models.HomePhoto).all()[::-1]
 
 
 # @router.post('/')
@@ -32,7 +36,7 @@ def get_all_photos(db: Session = Depends(get_db)):
 #
 
 @router.post('/')
-def create_photo(
+async def create_photo(
         request: schemas.HomePhotoBase,
         db: Session = Depends(get_db),
 ):
@@ -40,6 +44,12 @@ def create_photo(
     db.add(new_photo)
     db.commit()
     db.refresh(new_photo)
+    from app.main import websocket_clients_by_group
+
+    connected_clients: List[WebSocket] = []
+    for client in websocket_clients_by_group.get('trainees', []):
+        await client.send_json({"message": "New photo created!"})
+
     return new_photo
 
 

@@ -13,6 +13,8 @@ def create(request: schemas.Blog,db: Session):
     db.refresh(new_blog)
     return new_blog
 
+
+
 def destroy(id:int,db: Session):
     blog = db.query(models.Blog).filter(models.Blog.id == id)
 

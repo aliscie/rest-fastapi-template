@@ -63,6 +63,10 @@ class User(Base):
     is_admin = Column(Boolean, default=False)
     subscription_type = Column(String)
 
+    plan_type = Column(String)
+    antagonists = Column(String)
+    hormones = Column(String)
+
     blogs = relationship('Blog', back_populates="creator")
     body_photos = relationship('BodyPhoto', back_populates="creator")
     home_photos = relationship('HomePhoto', back_populates="creator")

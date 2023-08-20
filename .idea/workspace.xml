@@ -4,9 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08776744-769e-471e-8cc7-deaa9f03bd81" name="Changes" comment="use the database from render.com">
+    <list default="true" id="08776744-769e-471e-8cc7-deaa9f03bd81" name="Changes" comment="remove photos permission">
+      <change beforePath="$PROJECT_DIR$/.idea/fastapi-course-main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fastapi-course-main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/routers/personal_photos.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/routers/personal_photos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alembic/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/alembic/env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/repository/blog.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/repository/blog.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/routers/home_photos.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/routers/home_photos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/routers/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/routers/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/schemas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +101,13 @@
       <workItem from="1691674976829" duration="1163000" />
       <workItem from="1691744852381" duration="2587000" />
       <workItem from="1691750534813" duration="27000" />
-      <workItem from="1691763968037" duration="1538000" />
+      <workItem from="1691763968037" duration="1576000" />
+      <workItem from="1692169390067" duration="3071000" />
+      <workItem from="1692189095020" duration="41000" />
+      <workItem from="1692191606868" duration="2341000" />
+      <workItem from="1692195123388" duration="4275000" />
+      <workItem from="1692453561855" duration="514000" />
+      <workItem from="1692509802917" duration="5412000" />
     </task>
     <task id="LOCAL-00001" summary="basic backend">
       <created>1689594056257</created>
@@ -206,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691746850701</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="remove photos permission">
+      <created>1691767073602</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1691767073602</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,6 +256,7 @@
     <MESSAGE value="add env back" />
     <MESSAGE value="delete user" />
     <MESSAGE value="use the database from render.com" />
-    <option name="LAST_COMMIT_MESSAGE" value="use the database from render.com" />
+    <MESSAGE value="remove photos permission" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove photos permission" />
   </component>
 </project>

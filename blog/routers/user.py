@@ -111,11 +111,13 @@ def update_user(id: int, request: schemas.UserUpdate, db: Session = Depends(get_
 
 
 @router.post('/change-password', response_model=schemas.ShowUser)
-def change_password(
+async def change_password(
         request: schemas.ChangePassword,
         current_user: models.User = Depends(oauth2.get_current_user),
         db: Session = Depends(get_db)
 ):
+    from app.main import websocket_clients_by_group
+
     # current_user = db.query(models.User).filter(models.User.email == email).first()
     if (request.user_id is None) or (current_user.is_admin is False):
         target_user = db.query(models.User).filter(models.User.id == current_user.id).first()
@@ -127,4 +129,9 @@ def change_password(
     # db.add(target_user)
     db.commit()
     db.refresh(target_user)
+
+    for client in websocket_clients_by_group.get('trainees', []):
+        data = {"message": "force_logout", "user_id": target_user.id}
+        await client.send_json(data)
+
     return target_user

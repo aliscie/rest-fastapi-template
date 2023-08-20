@@ -17,6 +17,7 @@ sys.path.append(BASE_DIR)
 # access to the values within the .ini file in use.
 config = context.config
 database_url = os.getenv("DATABASE_URL")
+
 config.set_main_option("sqlalchemy.url", database_url)
 
 target_metadata = models.Base.metadata
