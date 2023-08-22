@@ -6,6 +6,8 @@ from .. import database, schemas, models, oauth2
 from ..hashing import Hash
 from ..repository import user
 
+# from ..token import invalidate_token
+
 router = APIRouter(
     prefix="/user",
     tags=['Users']
@@ -116,8 +118,6 @@ async def change_password(
         current_user: models.User = Depends(oauth2.get_current_user),
         db: Session = Depends(get_db)
 ):
-    from app.main import websocket_clients_by_group
-
     # current_user = db.query(models.User).filter(models.User.email == email).first()
     if (request.user_id is None) or (current_user.is_admin is False):
         target_user = db.query(models.User).filter(models.User.id == current_user.id).first()
@@ -125,11 +125,13 @@ async def change_password(
         target_user = db.query(models.User).filter(models.User.id == request.user_id).first()
 
     target_user.password = Hash.bcrypt(request.new_password)
+    target_user.force_logout = True
 
     # db.add(target_user)
     db.commit()
     db.refresh(target_user)
 
+    from app.main import websocket_clients_by_group
     for client in websocket_clients_by_group.get('trainees', []):
         data = {"message": "force_logout", "user_id": target_user.id}
         await client.send_json(data)

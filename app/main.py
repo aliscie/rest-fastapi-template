@@ -2,17 +2,13 @@ import os
 import sys
 
 from dotenv import load_dotenv
-from fastapi import FastAPI, Depends
 from fastapi import FastAPI, WebSocket
-from fastapi.responses import HTMLResponse
 from fastapi.middleware.cors import CORSMiddleware
-
 from fastapi_sqlalchemy import DBSessionMiddleware
 from starlette.websockets import WebSocketDisconnect
 
-from blog import models, schemas
+from blog import models
 from blog.database import engine
-from blog.oauth2 import get_current_user
 from blog.routers import blog, user, authentication, personal_photos, home_photos
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,10 +16,12 @@ load_dotenv(os.path.join(BASE_DIR, ".env"))
 sys.path.append(BASE_DIR)
 
 fastapi_app = FastAPI()
+
 fastapi_app.add_middleware(
     DBSessionMiddleware,
     db_url=os.getenv("DATABASE_URL"),
 )
+
 fastapi_app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # List the allowed frontend origins

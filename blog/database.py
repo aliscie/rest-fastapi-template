@@ -10,7 +10,6 @@ load_dotenv(os.path.join(BASE_DIR, ".env"))
 sys.path.append(BASE_DIR)
 
 SQLALCHAMY_DATABASE_URL = os.getenv("DATABASE_URL")
-# SQLALCHAMY_DATABASE_URL = 'sqlite:///./blog.db'
 
 engine = create_engine(
     SQLALCHAMY_DATABASE_URL,

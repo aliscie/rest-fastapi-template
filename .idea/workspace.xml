@@ -4,18 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08776744-769e-471e-8cc7-deaa9f03bd81" name="Changes" comment="remove photos permission">
-      <change beforePath="$PROJECT_DIR$/.idea/fastapi-course-main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fastapi-course-main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="08776744-769e-471e-8cc7-deaa9f03bd81" name="Changes" comment="fix SQLALCHAMY_DATABASE_URL">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/alembic/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/alembic/env.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/database.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/repository/blog.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/repository/blog.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/routers/home_photos.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/routers/home_photos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/routers/authentication.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/routers/authentication.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/routers/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/routers/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/schemas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/token.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/token.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +53,13 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Makefile Target.migrations">
+  <component name="RunManager" selected="Makefile Target.migrate">
+    <configuration name="migrate" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/MakeFile" target="migrate" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
     <configuration name="migrations" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
       <makefile filename="$PROJECT_DIR$/MakeFile" target="migrations" workingDirectory="" arguments="">
         <envs />
@@ -70,6 +74,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Makefile Target.migrate" />
         <item itemvalue="Makefile Target.migrations" />
         <item itemvalue="Makefile Target.start" />
       </list>
@@ -107,7 +112,9 @@
       <workItem from="1692191606868" duration="2341000" />
       <workItem from="1692195123388" duration="4275000" />
       <workItem from="1692453561855" duration="514000" />
-      <workItem from="1692509802917" duration="5412000" />
+      <workItem from="1692509802917" duration="10254000" />
+      <workItem from="1692625377559" duration="8843000" />
+      <workItem from="1692688053953" duration="171000" />
     </task>
     <task id="LOCAL-00001" summary="basic backend">
       <created>1689594056257</created>
@@ -228,7 +235,35 @@
       <option name="project" value="LOCAL" />
       <updated>1691767073602</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="new features">
+      <created>1692518019228</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1692518019228</updated>
+    </task>
+    <task id="LOCAL-00019" summary="add migrations">
+      <created>1692518054479</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1692518054479</updated>
+    </task>
+    <task id="LOCAL-00020" summary="fix SQLALCHAMY_DATABASE_URL">
+      <created>1692524597843</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1692524597843</updated>
+    </task>
+    <task id="LOCAL-00021" summary="fix SQLALCHAMY_DATABASE_URL">
+      <created>1692524755286</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1692524755286</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,6 +292,9 @@
     <MESSAGE value="delete user" />
     <MESSAGE value="use the database from render.com" />
     <MESSAGE value="remove photos permission" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove photos permission" />
+    <MESSAGE value="new features" />
+    <MESSAGE value="add migrations" />
+    <MESSAGE value="fix SQLALCHAMY_DATABASE_URL" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix SQLALCHAMY_DATABASE_URL" />
   </component>
 </project>

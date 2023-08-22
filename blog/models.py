@@ -66,6 +66,7 @@ class User(Base):
     plan_type = Column(String)
     antagonists = Column(String)
     hormones = Column(String)
+    force_logout = Column(Boolean, default=False)
 
     blogs = relationship('Blog', back_populates="creator")
     body_photos = relationship('BodyPhoto', back_populates="creator")

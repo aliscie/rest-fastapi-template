@@ -16,6 +16,9 @@ def login(request: schemas.Login, db: Session = Depends(database.get_db)):
     if not Hash.verify(user.password, request.password):
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
                             detail=f"Incorrect password")
+    user.force_logout = False
+    db.commit()
+    db.refresh(user)
 
     access_token = token.create_access_token(data={"sub": user.email})
     user_data = user.__dict__
